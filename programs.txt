@@ -1,0 +1,429 @@
+1st Chapter
+
+def mul(x,y):
+	return(x*y)
+print(mul(10,15))
+
+
+def welcome():
+	print("Welcome to Computer Technology")
+welcome()
+
+
+def square(x):
+	y = x*x
+	return y
+print(square(5) + square(5))
+
+
+def show():
+	print("Do not adopt unfair means in the exam")
+show()
+
+
+def add(a,b):
+	return (a+b)
+print(add(40,17))
+print(add(400,177))
+print(add(50,77))
+
+
+def my_func1():
+	print("Hello World")
+	return None
+
+def my_func2():
+	print("Hello World")
+	return
+
+def my_func3():
+	print("Hello World")
+
+
+def add(a,b,c):
+	return(a+b+c)
+
+temp = add(10,20,30)
+print(temp)
+
+
+def add_numbers(x,y):
+	total = x+y
+	return total
+	print("This won't be printed")
+print(add_numbers(15,35))
+
+
+#!/usr/bin/env python3
+#Function defination is here
+
+def changeme(mylist):
+	print("This changes a passed list into this function")
+	mylist.append([1,2,3,4])
+	print("Values inside the function: ", mylist)
+	return
+#Now you can call changeme function
+mylist = [10,20,30]
+changeme(mylist)
+print("Values outside the function: ", mylist)
+
+
+#!/usr/bin/env python3
+#Function defination is here
+def changeme(mylist):
+	print("This changes a passed list into this function")
+	mylist = [1,2,3,4]
+	# This would assign new reference in mylist
+	print("values inside the function: ", mylist)
+	return
+#Now you can call changeme function
+mylist = [10,20,30]
+changeme(mylist)
+print("Values outside the function: ", mylist)
+
+
+def Number(x,y,z):
+	print(x,y,z)
+Number(x=10,y=20) # TypeError
+
+
+def Number(x,y,z):
+	print(x,y,z)
+Number(x=10,y=20,z=30)
+
+
+def add(x,y,z):
+	return x+y+z
+print(add(x=2,y=3,z=4))
+
+
+def Number(x,y=30,z=20):
+	print(x,y,z)
+Number(10)
+
+
+def Number(x,y=30,z=20):
+	print(x,y,z)
+Number(50,60,70)
+
+
+def Show(*Numbers):
+	print(type(Numbers))
+	print(Numbers)
+Show(50,60,70,80,90)
+
+
+def Show(**Numbers):
+	print(type(Numbers))
+	print(Numbers)
+Show(x=2,y=3,z=4)
+
+
+import time
+localtime = time.localtime(time.time())
+print("Local Current Time is: ", localtime)
+
+
+from datetime import time
+from datetime import date
+from datetime import datetime
+today = date.today()
+print("Current Date is: ", today)
+
+
+from datetime import date
+from datetime import timedelta
+def yesterday():
+	today = date.today()
+	yesterday = today - timedelta(days=1)
+	return yesterday
+
+print("Today's Date is: ", today)
+print("Yesterday was : ", yesterday())
+
+
+from datetime import date
+from datetime import timedelta
+def tomorrow():
+	return date.today()+timedelta(days=1)
+print("Today's Date is: ", date.today())
+print("Yesterday will be : ", tomorrow())
+
+
+from datetime import time
+from datetime import date
+from datetime import datetime
+today = datetime.today()
+print("Today's Date & Time is :", today)
+
+
+import datetime
+n = datetime.datetime.now()
+t = datetime.datetime.today()
+u = datetime.datetime.utcnow()
+
+print("Now :", n)
+print("Today :", t)
+print("UTC Now :", u)
+
+
+import datetime
+t = datetime.time(12,46,30)
+print("Time is :", t)
+d = datetime.date.today()
+print("Date is :", d)
+dt = datetime.datetime.combine(d,t)
+print("Date & Time is :", dt)
+
+
+from datetime import timedelta
+#This represents 1 day
+a = timedelta(days=1)
+# Represents 1 hour
+b = timedelta(hours=1)
+# Subtract 1 hour from 1 day
+c = a-b
+print(c)
+
+
+import datetime
+min6 = datetime.timezone(datetime.timedelta(hours=-6))
+plus6 = datetime.timezone(datetime.timedelta(hours=6))
+d = datetime.datetime.now(min6)
+print(min6, ":", d)
+print(datetime.timezone.utc,":",d.astimezone(datetime.timezone.utc))
+print(plus6,":",d.astimezone(plus6))
+d_system = d.astimezone()
+print("Bangladesh Standard Time : ", d_system.tzinfo,":",d_system)
+
+
+def Area():
+	length = int(input("Enter the value of length: "))
+	width = int(input("Enter the value of width: "))
+	RectangleArea = length*width
+	print("Area of Rectangle is: ", RectangleArea)
+Area()
+
+
+def Largest():
+	Num1 = int(input("Enter the value of 1st Number"))
+	Num2 = int(input("Enter the value of 2nd Number"))
+	if(Num1>Num2):
+		print("Largest Number is Number1 & it is= ", Num1)
+	else:
+		print("Largest Number is Number2 & it is= ", Num2)
+
+Largest()
+
+
+def multiply(numbers):
+	total = 1
+	for x in numbers:
+		total *= x
+	return total
+print(multiply(6,2,5,6,1))
+
+
+def factorial(n):
+	if n == 0:
+		return 1
+	else:
+		return n * factorial(n-1)
+
+n = int(input("Enter a number: "))
+print(factorial(n))
+
+
+def test_prime(n):
+	if(n==1):
+		return False
+	elif (n==2):
+		return True
+	else:
+		for x in range(2,n):
+			if(n%x==0):
+				return False
+		return True
+print(test_prime(int(input("Enter a number: "))))
+
+
+def string_reverse(str):
+	rstr = ""
+	index = len(str)
+	while index > 0:
+		rstr += str[index-1]
+		index = index-1
+	return rstr
+print(string_reverse("123456789"))
+
+
+import math
+def Triangle():
+	a = int(input("Enter the value of a: ")) 
+	b = int(input("Enter the value of b: ")) 
+	c = int(input("Enter the value of c: "))
+
+	if((a+b)>c and (b+c)>a and (c+a)>b):
+		s = (a+b+c)/2
+		Area = math.sqrt(s*(s-a)*(s-b)*(s-c))
+		print("Area of the triange is: ", Area)
+	else:
+		print("The Triangle is not possible.")
+
+Triangle()
+
+
+import math
+def calculate_area(radius):
+	myarea = math.pi*radius**2
+	return myarea
+
+radius = calculate_area(int(input("Enter the radius: ")))
+print("The area of circle is: ", radius)
+
+
+def summation():
+	n=1
+	sum=0
+	for i in range(100):
+		if n%2 == 0:
+			continue
+		sum = sum + n
+	return sum
+add = summation()
+print("The summation is: ", add)
+
+
+def fibo(n):
+	if n<=1:
+		return n
+	else:
+		return(fibo(n-1)+fibo(n-2))
+n = 10
+print("Fibo Series...")
+for i in range(n):
+	print(fibo(i), end=" ")
+
+
+# 2nd Chapter
+
+f = open("file.txt", "w"):
+f.write("Welcome to python programming language.")
+f.close()
+
+
+f = open("file.txt", "r")
+x = f.read()
+print(x)
+f.close()
+
+
+my_file = open("test.txt", "w"):
+my_file.write("Welcome to python programming language.")
+my_file.close()
+
+
+file = open("info.txt", "w")
+file.write("Congratulations! You are now a python programmer.")
+file.close()
+
+
+info = open("info.txt", "a")
+info.write("\nMy name is Md. Wahid Ullah.\n")
+info.write("\nI'm graduated from DUET.\n")
+info.write("\nMy district is Chattogram.\n")
+info.write("\nI'm an employee of Haque Publication.\n")
+info.write("\nMy position is Research & Writer.\n")
+info.close()
+
+
+info = open("info.txt", "r")
+print(info.read(80))
+info.close()
+
+
+fread = open("info.txt","r")
+print(fread.read())
+fread.close()
+
+
+fread = open("info.txt", "r")
+for_one_char = fread.read(1)
+print(for_one_char)
+remaining_four_char = fread.read(4)
+print(remaining_four_char)
+rest_of_the_file = fread.read()
+print(rest_of_the_file)
+fread.close()
+
+
+with open("app.log","w") as f:
+	#first line
+	f.write("Wow! Now I'm a python programmer.\n")
+	# Second Line
+	f.write("I'm trained by this book.\n")
+	# Third line
+	f.write("This book is published from Haque Publications.")
+f.close()
+
+with open("app.log", "r") as f:
+	print(f.readlines())
+	print(f.readlines())
+f.close()
+
+
+file = open("app.log", "r")
+for f in file:
+	print(f)
+file.close()
+
+
+def program2():
+	f = open("MyFile.txt", "w")
+	line1 = input("Enter the line1 text: ")
+	line2 = input("Enter the line2 text: ")
+	line3 = input("Enter the line3 text: ")
+	new_line = "\n"
+	f.write(line1)
+	f.write(new_line)
+	f.write(line2)
+	f.write(new_line)
+	f.write(line3)
+	f.write(new_line)
+	f.close()
+
+program2()
+
+
+def program4():
+	with open("info.txt", "r") as f1:
+		data = f1.read()
+		count_capital = 0
+		count_small = 0
+		count_digits = 0
+		for ch in data:
+			if ch.islower():
+				count_small += 1
+			if ch.isupper():
+				count_capital += 1
+			if ch.isdigit():
+				count_digits += 1
+		print("Total number of capital letters are: ", count_capital)
+		print("Total number of small letters are: ", count_small)
+		print("Total number of digits are: ", count_digits)
+
+program4()
+
+
+
+def program9():
+	f = open("info.txt", "r")
+	print(f.tell())
+	f.seek(4,0)
+	print(f.read(5))
+	f.seek(10,0)
+	print(f.tell())
+	print(f.read(10))
+
+
+program9()
